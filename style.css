@@ -4,11 +4,11 @@
 
   --clr-primary-400: hsl(228, 39%, 23%);
 
-  --clr-neutral-100: hsl(232, 12%, 13%);
-  --clr-neutral-900: black;
+  --clr-neutral-900: hsl(232, 12%, 13%);
+  --clr-neutral-100: hsl(0 0% 100%);
   --ff-primary: "Be Vietnam Pro", sans-serif;
   --ff-body: var(--ff-primary);
-  --ff-accent: var(--ff-primary);
+  --ff-accent: var(--ff-primary); 
 
   --fw-regular: 300;
   --fw-semi-bold: 500;
@@ -182,4 +182,33 @@ svg {
 }
 .fs-body {
   font-size: var(--fs-body);
+}
+
+
+.container{
+  --max-width: 1110px;
+  --padding: 10rem; 
+  width: min(var(--max-width), 100% - var(--padding)*2);
+  margin-inline:auto;
+}
+
+.even-columns {
+  display: grid;
+  gap:1rem;
+}
+
+@media(min-width:50em){
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+
+  }
+}
+
+/* general styling */
+
+body{
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  color: var(--clr-primary-400);
 }
